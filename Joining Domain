@@ -6,12 +6,8 @@ $password = "Tech1432" | ConvertTo-SecureString -asPlainText -Force
 
 $username = "$domain\$user"
 
-$user2 = "InteractiveFlatPanel"
+$credential = New-Object System.Management.Automation.PSCredential($username,$password)
 
-$pass2 = "teach"
+Add-Computer -DomainName $domain -Credential $credential -verbose
 
-$lcred = New-object –TypeName System.Management.Automation.PSCredential -ArgumentList ($user2, $pass2)
-
-$credential = New-Object System.Management.Automation.PSCredential($user,$password)
-
-Add-Computer -DomainName $domain -Credential $credential -LocalCredential $lcred -verbose -Restart -Force
+Restart-Computer
