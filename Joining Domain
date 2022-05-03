@@ -8,6 +8,4 @@ $username = "$domain\$user"
 
 $credential = New-Object System.Management.Automation.PSCredential($username,$password)
 
-Add-Computer -DomainName $domain -Credential $credential -verbose
-
-Restart-Computer
+Add-Computer -DomainName $domain -Credential $credential -verbose -Restart
