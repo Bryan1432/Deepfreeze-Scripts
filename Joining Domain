@@ -2,7 +2,7 @@ $domain = "romaisd.com"
 
 $user = "bhernandez"
 
-$password = "Tech1432" | ConvertTo-SecureString -asPlainText -Force
+$password = "Tech2275" | ConvertTo-SecureString -asPlainText -Force
 
 $username = "$domain\$user"
 
