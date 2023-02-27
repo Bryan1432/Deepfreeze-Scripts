@@ -1,1 +1,0 @@
-Reset-ComputerMachinePassword -Server adm-vm-dc01.romaisd.com -Credential (New-Object System.Management.Automation.PSCredential ('bhernandez',(ConvertTo-SecureString 'Tech2275' -AsPlainText -Force)))

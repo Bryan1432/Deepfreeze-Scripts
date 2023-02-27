@@ -1,0 +1,3 @@
+$Password = ConvertTo-SecureString "Tech2275" -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential ("romaisd.com\bhernandez", $Password)
+Remove-Computer -Credential $cred -Force -Passthrough -Verbose -Restart
